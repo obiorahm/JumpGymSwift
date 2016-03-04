@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A20DC6E1C8A3646007F5DF2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC521C8A3646007F5DF2 /* background.png */; };
+		9A20DC6F1C8A3646007F5DF2 /* deadGator1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC531C8A3646007F5DF2 /* deadGator1.png */; };
+		9A20DC701C8A3646007F5DF2 /* deadGator2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC541C8A3646007F5DF2 /* deadGator2.png */; };
+		9A20DC711C8A3646007F5DF2 /* deadGator3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC551C8A3646007F5DF2 /* deadGator3.png */; };
+		9A20DC721C8A3646007F5DF2 /* gator1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC561C8A3646007F5DF2 /* gator1.png */; };
+		9A20DC731C8A3646007F5DF2 /* gator2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC571C8A3646007F5DF2 /* gator2.png */; };
+		9A20DC741C8A3646007F5DF2 /* gator3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC581C8A3646007F5DF2 /* gator3.png */; };
+		9A20DC751C8A3646007F5DF2 /* gator4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC591C8A3646007F5DF2 /* gator4.png */; };
+		9A20DC761C8A3646007F5DF2 /* gator5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC5A1C8A3646007F5DF2 /* gator5.png */; };
+		9A20DC771C8A3646007F5DF2 /* gator6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC5B1C8A3646007F5DF2 /* gator6.png */; };
+		9A20DC781C8A3646007F5DF2 /* gator7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC5C1C8A3646007F5DF2 /* gator7.png */; };
+		9A20DC791C8A3646007F5DF2 /* gator8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC5D1C8A3646007F5DF2 /* gator8.png */; };
+		9A20DC7A1C8A3646007F5DF2 /* gator9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC5E1C8A3646007F5DF2 /* gator9.png */; };
+		9A20DC7B1C8A3646007F5DF2 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC5F1C8A3646007F5DF2 /* Ground.png */; };
+		9A20DC7C1C8A3646007F5DF2 /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC601C8A3646007F5DF2 /* heart1.png */; };
+		9A20DC7D1C8A3646007F5DF2 /* jump1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC611C8A3646007F5DF2 /* jump1.png */; };
+		9A20DC7E1C8A3646007F5DF2 /* jump2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC621C8A3646007F5DF2 /* jump2.png */; };
+		9A20DC7F1C8A3646007F5DF2 /* jump3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC631C8A3646007F5DF2 /* jump3.png */; };
+		9A20DC801C8A3646007F5DF2 /* jump4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC641C8A3646007F5DF2 /* jump4.png */; };
+		9A20DC811C8A3646007F5DF2 /* jump5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC651C8A3646007F5DF2 /* jump5.png */; };
+		9A20DC821C8A3646007F5DF2 /* jump6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC661C8A3646007F5DF2 /* jump6.png */; };
+		9A20DC831C8A3646007F5DF2 /* jump7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC671C8A3646007F5DF2 /* jump7.png */; };
+		9A20DC841C8A3646007F5DF2 /* jump8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC681C8A3646007F5DF2 /* jump8.png */; };
+		9A20DC851C8A3646007F5DF2 /* jump9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC691C8A3646007F5DF2 /* jump9.png */; };
+		9A20DC861C8A3646007F5DF2 /* JumpGym.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC6A1C8A3646007F5DF2 /* JumpGym.png */; };
+		9A20DC871C8A3646007F5DF2 /* obstacle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC6B1C8A3646007F5DF2 /* obstacle1.png */; };
+		9A20DC881C8A3646007F5DF2 /* obstacle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC6C1C8A3646007F5DF2 /* obstacle2.png */; };
+		9A20DC891C8A3646007F5DF2 /* obstacle3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC6D1C8A3646007F5DF2 /* obstacle3.png */; };
 		9A4589A51C7C047B009ACCA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4589A41C7C047B009ACCA9 /* AppDelegate.swift */; };
 		9A4589A71C7C047B009ACCA9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9A4589A61C7C047B009ACCA9 /* GameScene.sks */; };
 		9A4589A91C7C047B009ACCA9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4589A81C7C047B009ACCA9 /* GameScene.swift */; };
@@ -36,6 +64,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A20DC521C8A3646007F5DF2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = JumpGymsprites/background.png; sourceTree = SOURCE_ROOT; };
+		9A20DC531C8A3646007F5DF2 /* deadGator1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deadGator1.png; path = JumpGymsprites/deadGator1.png; sourceTree = SOURCE_ROOT; };
+		9A20DC541C8A3646007F5DF2 /* deadGator2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deadGator2.png; path = JumpGymsprites/deadGator2.png; sourceTree = SOURCE_ROOT; };
+		9A20DC551C8A3646007F5DF2 /* deadGator3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deadGator3.png; path = JumpGymsprites/deadGator3.png; sourceTree = SOURCE_ROOT; };
+		9A20DC561C8A3646007F5DF2 /* gator1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator1.png; path = JumpGymsprites/gator1.png; sourceTree = SOURCE_ROOT; };
+		9A20DC571C8A3646007F5DF2 /* gator2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator2.png; path = JumpGymsprites/gator2.png; sourceTree = SOURCE_ROOT; };
+		9A20DC581C8A3646007F5DF2 /* gator3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator3.png; path = JumpGymsprites/gator3.png; sourceTree = SOURCE_ROOT; };
+		9A20DC591C8A3646007F5DF2 /* gator4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator4.png; path = JumpGymsprites/gator4.png; sourceTree = SOURCE_ROOT; };
+		9A20DC5A1C8A3646007F5DF2 /* gator5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator5.png; path = JumpGymsprites/gator5.png; sourceTree = SOURCE_ROOT; };
+		9A20DC5B1C8A3646007F5DF2 /* gator6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator6.png; path = JumpGymsprites/gator6.png; sourceTree = SOURCE_ROOT; };
+		9A20DC5C1C8A3646007F5DF2 /* gator7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator7.png; path = JumpGymsprites/gator7.png; sourceTree = SOURCE_ROOT; };
+		9A20DC5D1C8A3646007F5DF2 /* gator8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator8.png; path = JumpGymsprites/gator8.png; sourceTree = SOURCE_ROOT; };
+		9A20DC5E1C8A3646007F5DF2 /* gator9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gator9.png; path = JumpGymsprites/gator9.png; sourceTree = SOURCE_ROOT; };
+		9A20DC5F1C8A3646007F5DF2 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ground.png; path = JumpGymsprites/Ground.png; sourceTree = SOURCE_ROOT; };
+		9A20DC601C8A3646007F5DF2 /* heart1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart1.png; path = JumpGymsprites/heart1.png; sourceTree = SOURCE_ROOT; };
+		9A20DC611C8A3646007F5DF2 /* jump1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump1.png; path = JumpGymsprites/jump1.png; sourceTree = SOURCE_ROOT; };
+		9A20DC621C8A3646007F5DF2 /* jump2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump2.png; path = JumpGymsprites/jump2.png; sourceTree = SOURCE_ROOT; };
+		9A20DC631C8A3646007F5DF2 /* jump3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump3.png; path = JumpGymsprites/jump3.png; sourceTree = SOURCE_ROOT; };
+		9A20DC641C8A3646007F5DF2 /* jump4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump4.png; path = JumpGymsprites/jump4.png; sourceTree = SOURCE_ROOT; };
+		9A20DC651C8A3646007F5DF2 /* jump5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump5.png; path = JumpGymsprites/jump5.png; sourceTree = SOURCE_ROOT; };
+		9A20DC661C8A3646007F5DF2 /* jump6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump6.png; path = JumpGymsprites/jump6.png; sourceTree = SOURCE_ROOT; };
+		9A20DC671C8A3646007F5DF2 /* jump7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump7.png; path = JumpGymsprites/jump7.png; sourceTree = SOURCE_ROOT; };
+		9A20DC681C8A3646007F5DF2 /* jump8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump8.png; path = JumpGymsprites/jump8.png; sourceTree = SOURCE_ROOT; };
+		9A20DC691C8A3646007F5DF2 /* jump9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jump9.png; path = JumpGymsprites/jump9.png; sourceTree = SOURCE_ROOT; };
+		9A20DC6A1C8A3646007F5DF2 /* JumpGym.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JumpGym.png; path = JumpGymsprites/JumpGym.png; sourceTree = SOURCE_ROOT; };
+		9A20DC6B1C8A3646007F5DF2 /* obstacle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = obstacle1.png; path = JumpGymsprites/obstacle1.png; sourceTree = SOURCE_ROOT; };
+		9A20DC6C1C8A3646007F5DF2 /* obstacle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = obstacle2.png; path = JumpGymsprites/obstacle2.png; sourceTree = SOURCE_ROOT; };
+		9A20DC6D1C8A3646007F5DF2 /* obstacle3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = obstacle3.png; path = JumpGymsprites/obstacle3.png; sourceTree = SOURCE_ROOT; };
 		9A4589A11C7C047B009ACCA9 /* JumpGymSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumpGymSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4589A41C7C047B009ACCA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4589A61C7C047B009ACCA9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -81,6 +137,7 @@
 		9A4589981C7C047B009ACCA9 = {
 			isa = PBXGroup;
 			children = (
+				9A79ADBC1C8A32AC009D0AB0 /* JumpGymsprites */,
 				9A4589A31C7C047B009ACCA9 /* JumpGymSwift */,
 				9A4589BC1C7C047B009ACCA9 /* JumpGymSwiftTests */,
 				9A4589C71C7C047B009ACCA9 /* JumpGymSwiftUITests */,
@@ -106,6 +163,34 @@
 				9A4589A81C7C047B009ACCA9 /* GameScene.swift */,
 				9A4589AA1C7C047B009ACCA9 /* GameViewController.swift */,
 				9A4589AC1C7C047B009ACCA9 /* Main.storyboard */,
+				9A20DC521C8A3646007F5DF2 /* background.png */,
+				9A20DC531C8A3646007F5DF2 /* deadGator1.png */,
+				9A20DC541C8A3646007F5DF2 /* deadGator2.png */,
+				9A20DC551C8A3646007F5DF2 /* deadGator3.png */,
+				9A20DC561C8A3646007F5DF2 /* gator1.png */,
+				9A20DC571C8A3646007F5DF2 /* gator2.png */,
+				9A20DC581C8A3646007F5DF2 /* gator3.png */,
+				9A20DC591C8A3646007F5DF2 /* gator4.png */,
+				9A20DC5A1C8A3646007F5DF2 /* gator5.png */,
+				9A20DC5B1C8A3646007F5DF2 /* gator6.png */,
+				9A20DC5C1C8A3646007F5DF2 /* gator7.png */,
+				9A20DC5D1C8A3646007F5DF2 /* gator8.png */,
+				9A20DC5E1C8A3646007F5DF2 /* gator9.png */,
+				9A20DC5F1C8A3646007F5DF2 /* Ground.png */,
+				9A20DC601C8A3646007F5DF2 /* heart1.png */,
+				9A20DC611C8A3646007F5DF2 /* jump1.png */,
+				9A20DC621C8A3646007F5DF2 /* jump2.png */,
+				9A20DC631C8A3646007F5DF2 /* jump3.png */,
+				9A20DC641C8A3646007F5DF2 /* jump4.png */,
+				9A20DC651C8A3646007F5DF2 /* jump5.png */,
+				9A20DC661C8A3646007F5DF2 /* jump6.png */,
+				9A20DC671C8A3646007F5DF2 /* jump7.png */,
+				9A20DC681C8A3646007F5DF2 /* jump8.png */,
+				9A20DC691C8A3646007F5DF2 /* jump9.png */,
+				9A20DC6A1C8A3646007F5DF2 /* JumpGym.png */,
+				9A20DC6B1C8A3646007F5DF2 /* obstacle1.png */,
+				9A20DC6C1C8A3646007F5DF2 /* obstacle2.png */,
+				9A20DC6D1C8A3646007F5DF2 /* obstacle3.png */,
 				9A4589AF1C7C047B009ACCA9 /* Assets.xcassets */,
 				9A4589B11C7C047B009ACCA9 /* LaunchScreen.storyboard */,
 				9A4589B41C7C047B009ACCA9 /* Info.plist */,
@@ -129,6 +214,13 @@
 				9A4589CA1C7C047B009ACCA9 /* Info.plist */,
 			);
 			path = JumpGymSwiftUITests;
+			sourceTree = "<group>";
+		};
+		9A79ADBC1C8A32AC009D0AB0 /* JumpGymsprites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = JumpGymsprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,10 +330,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A20DC891C8A3646007F5DF2 /* obstacle3.png in Resources */,
+				9A20DC721C8A3646007F5DF2 /* gator1.png in Resources */,
 				9A4589A71C7C047B009ACCA9 /* GameScene.sks in Resources */,
+				9A20DC791C8A3646007F5DF2 /* gator8.png in Resources */,
+				9A20DC861C8A3646007F5DF2 /* JumpGym.png in Resources */,
+				9A20DC801C8A3646007F5DF2 /* jump4.png in Resources */,
+				9A20DC881C8A3646007F5DF2 /* obstacle2.png in Resources */,
+				9A20DC7E1C8A3646007F5DF2 /* jump2.png in Resources */,
+				9A20DC831C8A3646007F5DF2 /* jump7.png in Resources */,
+				9A20DC841C8A3646007F5DF2 /* jump8.png in Resources */,
+				9A20DC761C8A3646007F5DF2 /* gator5.png in Resources */,
+				9A20DC731C8A3646007F5DF2 /* gator2.png in Resources */,
+				9A20DC7D1C8A3646007F5DF2 /* jump1.png in Resources */,
+				9A20DC741C8A3646007F5DF2 /* gator3.png in Resources */,
+				9A20DC6E1C8A3646007F5DF2 /* background.png in Resources */,
 				9A4589B31C7C047B009ACCA9 /* LaunchScreen.storyboard in Resources */,
+				9A20DC751C8A3646007F5DF2 /* gator4.png in Resources */,
+				9A20DC7A1C8A3646007F5DF2 /* gator9.png in Resources */,
+				9A20DC701C8A3646007F5DF2 /* deadGator2.png in Resources */,
+				9A20DC7F1C8A3646007F5DF2 /* jump3.png in Resources */,
+				9A20DC851C8A3646007F5DF2 /* jump9.png in Resources */,
+				9A20DC821C8A3646007F5DF2 /* jump6.png in Resources */,
 				9A4589B01C7C047B009ACCA9 /* Assets.xcassets in Resources */,
+				9A20DC771C8A3646007F5DF2 /* gator6.png in Resources */,
 				9A4589AE1C7C047B009ACCA9 /* Main.storyboard in Resources */,
+				9A20DC781C8A3646007F5DF2 /* gator7.png in Resources */,
+				9A20DC7C1C8A3646007F5DF2 /* heart1.png in Resources */,
+				9A20DC6F1C8A3646007F5DF2 /* deadGator1.png in Resources */,
+				9A20DC871C8A3646007F5DF2 /* obstacle1.png in Resources */,
+				9A20DC811C8A3646007F5DF2 /* jump5.png in Resources */,
+				9A20DC7B1C8A3646007F5DF2 /* Ground.png in Resources */,
+				9A20DC711C8A3646007F5DF2 /* deadGator3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +615,7 @@
 				9A4589CF1C7C047B009ACCA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A4589D01C7C047B009ACCA9 /* Build configuration list for PBXNativeTarget "JumpGymSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +624,7 @@
 				9A4589D21C7C047B009ACCA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A4589D31C7C047B009ACCA9 /* Build configuration list for PBXNativeTarget "JumpGymSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +633,7 @@
 				9A4589D51C7C047B009ACCA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
