@@ -35,6 +35,10 @@
 		9A20DC871C8A3646007F5DF2 /* obstacle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC6B1C8A3646007F5DF2 /* obstacle1.png */; };
 		9A20DC881C8A3646007F5DF2 /* obstacle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC6C1C8A3646007F5DF2 /* obstacle2.png */; };
 		9A20DC891C8A3646007F5DF2 /* obstacle3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A20DC6D1C8A3646007F5DF2 /* obstacle3.png */; };
+		9A20DC8D1C8A3926007F5DF2 /* Running.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A20DC8C1C8A3926007F5DF2 /* Running.swift */; };
+		9A20DC8F1C8D3A05007F5DF2 /* Jumping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A20DC8E1C8D3A05007F5DF2 /* Jumping.swift */; };
+		9A20DC911C8D5783007F5DF2 /* Falling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A20DC901C8D5783007F5DF2 /* Falling.swift */; };
+		9A20DC931C8DDBF0007F5DF2 /* DeadGator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A20DC921C8DDBF0007F5DF2 /* DeadGator.swift */; };
 		9A4589A51C7C047B009ACCA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4589A41C7C047B009ACCA9 /* AppDelegate.swift */; };
 		9A4589A71C7C047B009ACCA9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9A4589A61C7C047B009ACCA9 /* GameScene.sks */; };
 		9A4589A91C7C047B009ACCA9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4589A81C7C047B009ACCA9 /* GameScene.swift */; };
@@ -92,6 +96,10 @@
 		9A20DC6B1C8A3646007F5DF2 /* obstacle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = obstacle1.png; path = JumpGymsprites/obstacle1.png; sourceTree = SOURCE_ROOT; };
 		9A20DC6C1C8A3646007F5DF2 /* obstacle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = obstacle2.png; path = JumpGymsprites/obstacle2.png; sourceTree = SOURCE_ROOT; };
 		9A20DC6D1C8A3646007F5DF2 /* obstacle3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = obstacle3.png; path = JumpGymsprites/obstacle3.png; sourceTree = SOURCE_ROOT; };
+		9A20DC8C1C8A3926007F5DF2 /* Running.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Running.swift; sourceTree = "<group>"; };
+		9A20DC8E1C8D3A05007F5DF2 /* Jumping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jumping.swift; sourceTree = "<group>"; };
+		9A20DC901C8D5783007F5DF2 /* Falling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Falling.swift; sourceTree = "<group>"; };
+		9A20DC921C8DDBF0007F5DF2 /* DeadGator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadGator.swift; sourceTree = "<group>"; };
 		9A4589A11C7C047B009ACCA9 /* JumpGymSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumpGymSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4589A41C7C047B009ACCA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4589A61C7C047B009ACCA9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 				9A4589A41C7C047B009ACCA9 /* AppDelegate.swift */,
 				9A4589A61C7C047B009ACCA9 /* GameScene.sks */,
 				9A4589A81C7C047B009ACCA9 /* GameScene.swift */,
+				9A20DC8C1C8A3926007F5DF2 /* Running.swift */,
+				9A20DC8E1C8D3A05007F5DF2 /* Jumping.swift */,
+				9A20DC901C8D5783007F5DF2 /* Falling.swift */,
+				9A20DC921C8DDBF0007F5DF2 /* DeadGator.swift */,
 				9A4589AA1C7C047B009ACCA9 /* GameViewController.swift */,
 				9A4589AC1C7C047B009ACCA9 /* Main.storyboard */,
 				9A20DC521C8A3646007F5DF2 /* background.png */,
@@ -387,7 +399,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4589A91C7C047B009ACCA9 /* GameScene.swift in Sources */,
+				9A20DC8D1C8A3926007F5DF2 /* Running.swift in Sources */,
+				9A20DC931C8DDBF0007F5DF2 /* DeadGator.swift in Sources */,
 				9A4589AB1C7C047B009ACCA9 /* GameViewController.swift in Sources */,
+				9A20DC911C8D5783007F5DF2 /* Falling.swift in Sources */,
+				9A20DC8F1C8D3A05007F5DF2 /* Jumping.swift in Sources */,
 				9A4589A51C7C047B009ACCA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = obiorahm.JumpGymSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -543,6 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = obiorahm.JumpGymSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

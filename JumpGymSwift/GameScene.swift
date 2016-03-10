@@ -7,14 +7,17 @@
 //
 
 import SpriteKit
+import GameplayKit
+import CoreMotion
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    let gatorGroup: UInt32 = 0x1 << 0
-    let obstacleGroup: UInt32 = 0x1 << 1
-    let groundGroup: UInt32 = 0x1 << 2
-    let openingGroup: UInt32 = 0x1 << 3
-    let ceilingGroup: UInt32 = 0x1 << 4
+    let gatorGroup: UInt32 = 0x01 << 0
+    let obstacleGroup: UInt32 = 0x01 << 1
+    let groundGroup: UInt32 = 0x01 << 2
+    let openingGroup: UInt32 = 0x01 << 3
+    let ceilingGroup: UInt32 = 0x01 << 4
+    let coinGroup: UInt32 = 0x01 << 5
 
     enum objectsZPositions: CGFloat{
         case background = 0
@@ -29,10 +32,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var ground = SKSpriteNode()
     var background = SKSpriteNode()
     var ceiling = SKSpriteNode()
+    var coin = SKSpriteNode()
+    var obstacle = SKSpriteNode()
     
     var movingGameObject = SKNode()
     
     var obstacleSpeed: NSTimeInterval = 7
+    var coinSpeed: NSTimeInterval = 10
+    
     var obstacleSpawned: Int = 0
     
     var gameOver = false
@@ -47,9 +54,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var healthFactLabelNode = SKLabelNode()
     
     var liveNodes: [SKSpriteNode] = []
+    var coins:[SKSpriteNode] = []
+    
+    
+    var stateMachine: GKStateMachine!
+    
+    var motionManager: CMMotionManager!
+    
     
     
     override func didMoveToView(view: SKView) {
+        //Create the states add add them to the game state machine
+        
         /* Setup your scene here */
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.gravity = CGVectorMake(0.0, -10.0)
@@ -59,12 +75,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createGround()
         createCeiling()
         createGator()
+        
+        //Create state machine to change from running to jumping state and falling state
+        stateMachine = GKStateMachine(states:[
+            Running(game: self),
+            Jumping(game: self),
+            Falling(game: self),
+            DeadGator(game: self)
+            ])
+
+        stateMachine.enterState(Running.self)
+        print(gator)
+
         createLiveNodes()
         createScoreLabel()
         
         self.addChild(movingGameObject)
         
         NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "loadObstacles", userInfo: nil, repeats: true)
+        
+
+        NSTimer.scheduledTimerWithTimeInterval(7, target: self, selector: "loadCoinNTimes", userInfo: nil, repeats: true)
+
     
     }
     
@@ -116,9 +148,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if lives == 0{
                 movingGameObject.speed = 0
                 gameOver = true
-                gator.removeActionForKey("gatorRun")
-                gator.removeFromParent()
-                createDeadGator(gator.position.x)
+                
+                stateMachine.enterState(DeadGator.self)
                 
                 createGameOverLabel()
                 createRestartLabel()
@@ -130,6 +161,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 liveNodes[lives].removeFromParent()
             }
    
+        }else if contact.bodyA.categoryBitMask == groundGroup || contact.bodyB.categoryBitMask == groundGroup{
+            stateMachine.enterState(Running.self)
+        }else if contact.bodyA.categoryBitMask == coinGroup || contact.bodyB.categoryBitMask == coinGroup{
+            print (contact.bodyB.node)
+            //find a way to know that contact.bodyB.node == coin
+            contact.bodyB.node?.removeFromParent()
         }
     }
     
@@ -156,22 +193,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(healthFactLabelNode)
     }
     
-    func createDeadGator(x: CGFloat){
-        let deadGatorTexture1 = SKTexture(imageNamed: "deadGator1")
-        let deadGatorTexture2 = SKTexture(imageNamed: "deadGator2")
-        let deadGatorTexture3 = SKTexture(imageNamed: "deadGator3")
-        
-        let runningAnimation = SKAction.animateWithTextures([deadGatorTexture1, deadGatorTexture2, deadGatorTexture3], timePerFrame: 0.1)
-        let runforever = SKAction.repeatActionForever(runningAnimation)
-
-        gator = SKSpriteNode(texture: deadGatorTexture1)
-        gator.position = CGPoint(x: x, y: CGRectGetMaxY(ground.frame))
-        gator.setScale(0.5)
-        gator.zPosition = objectsZPositions.score.rawValue
-        gator.runAction(runforever, withKey: "gatorRun")
-        addChild(gator)
-
-    }
     
     func createLiveNodes(){
         let liveNodesTexture = SKTexture(imageNamed: "heart1")
@@ -188,27 +209,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createGator(){
-        
+
         let gatorTexture1 = SKTexture(imageNamed: "gator1")
-        let gatorTexture2 = SKTexture(imageNamed: "gator2")
-        let gatorTexture3 = SKTexture(imageNamed: "gator3")
-        let gatorTexture4 = SKTexture(imageNamed: "gator4")
-        let gatorTexture5 = SKTexture(imageNamed: "gator5")
-        let gatorTexture6 = SKTexture(imageNamed: "gator6")
-        let gatorTexture7 = SKTexture(imageNamed: "gator7")
-        let gatorTexture8 = SKTexture(imageNamed: "gator8")
-        
-        let runningAnimation = SKAction.animateWithTextures([gatorTexture1, gatorTexture2, gatorTexture3, gatorTexture4, gatorTexture5, gatorTexture6, gatorTexture7, gatorTexture8], timePerFrame: 0.1)
-        let runforever = SKAction.repeatActionForever(runningAnimation)
         
         gator = SKSpriteNode(texture: gatorTexture1)
         gator.position = CGPoint(x: self.frame.size.width * 0.35, y: CGRectGetMaxY(ground.frame))
         gator.setScale(0.5)
         gator.zPosition = objectsZPositions.gator.rawValue
-        
-        // control collision
-        gator.runAction(runforever, withKey: "gatorRun")
-        
         
         gator.physicsBody = SKPhysicsBody(circleOfRadius:gator.size.height/4)
         gator.physicsBody?.categoryBitMask = gatorGroup
@@ -219,8 +226,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // do you want it to move
         gator.physicsBody?.dynamic = true
         gator.physicsBody?.allowsRotation = false
-        
-        self.addChild(gator)
     
     }
     
@@ -239,11 +244,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
        //randomly select one of the obstacle textures
-        let randomY: Int = Int(arc4random_uniform(3))
+        let indexObstacleTexture: Int = Int(arc4random_uniform(3))
         
         let allObstacles: [SKTexture] = [obstacleTexture, obstacleTexture1, obstacleTexture2]
       
-        let obstacle = SKSpriteNode(texture: allObstacles[randomY])
+        obstacle = SKSpriteNode(texture: allObstacles[indexObstacleTexture])
         
         
         obstacle.position = CGPoint(x: self.frame.width + obstacle.size.width, y: ground.size.height)
@@ -272,6 +277,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         }
+    
+    func loadCoin(n: CGFloat){
+        
+        let coinTexture = SKTexture(imageNamed: "heart1")
+        coin = SKSpriteNode(texture: coinTexture)
+        coin.setScale(2)
+        coin.position = CGPoint(x: self.frame.width + coin.size.width * n, y: obstacle.size.height + 50)
+        coin.physicsBody = SKPhysicsBody(circleOfRadius: coin.size.height/2)
+        coin.physicsBody?.dynamic = false
+        coin.physicsBody?.categoryBitMask = coinGroup
+        coin.physicsBody?.contactTestBitMask = gatorGroup
+        
+        coin.zPosition = objectsZPositions.obstacles.rawValue
+        
+        let moveCoin = SKAction.moveToX(-coin.size.width, duration: coinSpeed + NSTimeInterval(n * 0.5))
+        let removeCoin = SKAction.removeFromParent()
+        coin.runAction(SKAction.sequence([moveCoin, removeCoin]), withKey: "coinRun")
+        
+        movingGameObject.addChild(coin)
+
+    }
+    
+    func loadCoinNTimes(){
+        
+        guard let randomN: Int = Int(arc4random_uniform(UInt32(10))) where randomN > 0 else { return }
+        for var i: Int = 1; i < randomN; i++ {
+            loadCoin(CGFloat(i))
+        }
+    }
     
     func createBackground(){
         let BKTexture = SKTexture(imageNamed: "background")
@@ -357,10 +391,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
        /* Called when a touch begins */
         
         if gameOver == false{
+            
+            stateMachine.enterState(Jumping.self)
     
             // control collision
             gator.physicsBody?.velocity = CGVectorMake(0, 0)
-            gator.physicsBody?.applyImpulse(CGVectorMake(0, 60))
+            gator.physicsBody?.applyImpulse(CGVectorMake(0, 80))
 
 
         }else {
@@ -385,10 +421,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
 
     }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if gameOver == false{
+            stateMachine.enterState(Falling.self)
+        }
+    }
    
     
     override func update(currentTime: CFTimeInterval) {
-            }
+                
+    }
     
 
 
